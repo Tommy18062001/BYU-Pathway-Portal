@@ -1,25 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { Component } from 'react';
+import Left from './Left.js';
+import Right from './Right.js';
+import Middle from './Middle.js';
+import Header from './components/Header.js';
+import ChatButton from './ChatButton.js';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export class App extends Component {
+  render() {
+    return (
+      <div className="App" >
+        {/* This is the header */}
+        <Header />
+
+        {/* This is the left side of the page */}
+        <Left />
+
+        {/* This is the middle side of the page */}
+        <Middle />
+
+        {/* This is the right side of the page */}
+        <Right />
+
+        {/* this is the chat button */}
+        <ChatButton />
+      </div>
+    )
+  }
 }
 
-export default App;
+export default App
